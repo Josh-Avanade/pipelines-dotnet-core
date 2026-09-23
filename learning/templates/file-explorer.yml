@@ -4,3 +4,4 @@ steps:
       pwd
       echo "Contents of current directory:"
       ls -la
+    displayName: 'Print current directory and contents'

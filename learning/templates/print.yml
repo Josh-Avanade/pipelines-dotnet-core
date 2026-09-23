@@ -3,4 +3,4 @@ parameters:
     type: string
 steps: 
   - script: echo " ${{ parameters.message }}"
-    displayName: 'Print from template'
+    displayName: 'Print message'

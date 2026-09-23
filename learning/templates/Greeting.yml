@@ -4,4 +4,4 @@ parameters:
 
 steps: 
   - script: echo "Hello, ${{ parameters.name }}!"
-    displayName: 'Print from template'
+    displayName: 'Print greeting'
