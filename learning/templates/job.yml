@@ -11,7 +11,7 @@ jobs:
     steps: |
       - template: templates/Greeting.yml
         parameters:
-          name: 'World'
+          name: "Josh"
       echo "Job completed successfully."
       - template: templates/print.yml
         parameters:

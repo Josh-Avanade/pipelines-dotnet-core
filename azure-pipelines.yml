@@ -4,3 +4,6 @@ pool:
   vmImage: 'ubuntu-latest'
 jobs: 
    - template: learning/templates/job.yml
+     parameters:
+       name: "Josh"
+       message: "Hello, {parameters.name}!"
