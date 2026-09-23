@@ -1,9 +1,6 @@
 parameters:
   - name: message
     type: string
-variables:
-    name: message
-    value: "World"
 steps: 
-  - script: echo " ${{ parameters.message }} variable name is ${{ variables.message }} and variable value is ${{ variables.value }}"
+  - script: echo " ${{ parameters.message }}"
     displayName: 'Print message'
