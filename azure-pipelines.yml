@@ -2,7 +2,8 @@ trigger:
   - main
 pool: 
   vmImage: 'ubuntu-latest'
-
+jobs: 
+   - template: learning/templates/job.yml
 steps:
   - template: learning/templates/print.yml
     parameters:
@@ -12,4 +13,3 @@ steps:
   - template: learning/templates/Greeting.yml
     parameters:
       name: 'Joshua'
-  - template: learning/templates/job.yml
