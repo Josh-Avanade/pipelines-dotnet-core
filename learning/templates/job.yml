@@ -12,7 +12,6 @@ jobs:
       - template: templates/Greeting.yml
         parameters:
           name: "Josh"
-      echo "Job completed successfully."
       - template: templates/print.yml
         parameters:
           message: 'Hello, ${{ parameters.name }}!'
