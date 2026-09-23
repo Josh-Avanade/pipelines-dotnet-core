@@ -1,9 +1,20 @@
+parameters:
+  - name: name
+    type: string
+  - name: message
+    type: string
+
+
 jobs:
   - job: PrintGreeting
-    displayName: 'Print Greeting Job'
+    displayName: 'DoAllJob'
     steps: |
       - template: templates/Greeting.yml
         parameters:
           name: 'World'
       echo "Job completed successfully."
-    
+      - template: templates/print.yml
+        parameters:
+          message: 'Hello, ${{ parameters.name }}!'
+      -template: templates/file-explorer.yml
+      -template: templates/build-info.yml

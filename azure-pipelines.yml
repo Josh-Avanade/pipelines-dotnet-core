@@ -4,12 +4,3 @@ pool:
   vmImage: 'ubuntu-latest'
 jobs: 
    - template: learning/templates/job.yml
-steps:
-  - template: learning/templates/print.yml
-    parameters:
-      message: 'World'
-  - template: learning/templates/build-info.yml
-  - template: learning/templates/file-explorer.yml
-  - template: learning/templates/Greeting.yml
-    parameters:
-      name: 'Joshua'
