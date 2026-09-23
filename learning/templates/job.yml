@@ -1,0 +1,9 @@
+jobs:
+  - job: PrintGreeting
+    displayName: 'Print Greeting Job'
+    steps: |
+      - template: templates/Greeting.yml
+        parameters:
+          name: 'World'
+      echo "Job completed successfully."
+    

@@ -12,3 +12,4 @@ steps:
   - template: learning/templates/Greeting.yml
     parameters:
       name: 'Joshua'
+  - template: learning/templates/job.yml
