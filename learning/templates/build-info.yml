@@ -1,0 +1,5 @@
+steps:
+  - script: |
+    echo "Build Number: $(Build.BuildNumber)"
+    echo "Repository Name: $(Build.Repository.Name)"
+    echo "Source Branch: $(Build.SourceBranch)"

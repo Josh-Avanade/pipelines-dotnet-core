@@ -1,0 +1,4 @@
+steps:
+  - script: | 
+    pwd
+    ls -la

@@ -1,0 +1,7 @@
+parameters:
+  - name: name
+    type: string
+
+steps: 
+  - script: echo "Hello, ${{ parameters.name }}!"
+    displayName: 'Print from template'

@@ -1,15 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+trigger: 
+  -main
 
-trigger:
-- master
 
-pool:
-  vmImage: ubuntu-latest
+pool: 
+  vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Print Hello World'
-
+  - template: templates/print.yml
+    parameters:
+      message: 'World'
+  - template: templates/build-info.yml
+  - template: templates/file-explorer.yml
+  - template: templates/Greeting.yml
+    parameters:
+      name: 'Joshua'
