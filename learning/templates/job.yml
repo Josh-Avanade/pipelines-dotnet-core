@@ -9,7 +9,11 @@ jobs:
   - job: PrintGreeting
     displayName: 'DoAllJob'
     steps: |
-      - template: templates/Greeting.yml
-      - template: templates/print.yml
-      -template: templates/file-explorer.yml
-      -template: templates/build-info.yml
+    - template: templates/Greeting.yml
+      parameters:
+        name: ${{ parameters.name }}
+    - template: templates/print.yml
+      parameters:
+        message: ${{ parameters.message }}
+    - template: templates/file-explorer.yml
+    - template: templates/build-info.yml
