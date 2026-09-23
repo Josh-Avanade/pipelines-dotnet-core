@@ -10,10 +10,6 @@ jobs:
     displayName: 'DoAllJob'
     steps: |
       - template: templates/Greeting.yml
-        parameters:
-          name: "Josh"
       - template: templates/print.yml
-        parameters:
-          message: 'Hello, ${{ parameters.name }}!'
       -template: templates/file-explorer.yml
       -template: templates/build-info.yml
