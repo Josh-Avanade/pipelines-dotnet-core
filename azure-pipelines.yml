@@ -1,16 +1,14 @@
 trigger: 
-  -main
-
-
+  - main
 pool: 
   vmImage: 'ubuntu-latest'
 
 steps:
-  - template: templates/print.yml
+  - template: learning/templates/print.yml
     parameters:
       message: 'World'
-  - template: templates/build-info.yml
-  - template: templates/file-explorer.yml
-  - template: templates/Greeting.yml
+  - template: learning/templates/build-info.yml
+  - template: learning/templates/file-explorer.yml
+  - template: learning/templates/Greeting.yml
     parameters:
       name: 'Joshua'
