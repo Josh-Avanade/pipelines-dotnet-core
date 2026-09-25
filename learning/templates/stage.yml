@@ -1,0 +1,9 @@
+stages:
+- stage: LearningStage
+  displayName: "Learning Stage"
+
+  jobs:
+  - template: job.yml
+    parameters:
+      name: 'Joshua'
+      message: 'Hello'

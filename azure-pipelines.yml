@@ -2,8 +2,8 @@ trigger:
   - main
 pool: 
   vmImage: 'ubuntu-latest'
-jobs: 
-   - template: learning/templates/job.yml
+stages: 
+   - template: learning/templates/stage.yml
      parameters:
        name: "Josh"
-       message: "Hello, {parameters.name}!"
+       message: "buddy!"

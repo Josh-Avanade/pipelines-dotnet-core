@@ -1,5 +1,5 @@
 parameters:
-  - name: message
+  - message: message
     type: string
 steps: 
   - script: echo " ${{ parameters.message }}"
