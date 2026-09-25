@@ -6,14 +6,19 @@ parameters:
 
 
 jobs:
-  - job: PrintGreeting
-    displayName: 'DoAllJob'
-    steps: |
-    - template: Greeting.yml
-      parameters:
-        name: ${{ parameters.name }}
-    - template: print.yml
-      parameters:
-        message: ${{ parameters.message }}
-    - template: file-explorer.yml
-    - template: build-info.yml
+- job: PrintGreeting
+  displayName: 'DoAllJob'
+
+  steps:
+
+  - template: Greeting.yml
+    parameters:
+      name: '${{ parameters.name }}'
+
+  - template: print.yml
+    parameters:
+      message: 'Hi ${{ parameters.message }}'
+
+  - template: file-explorer.yml
+
+  - template: build-info.yml
