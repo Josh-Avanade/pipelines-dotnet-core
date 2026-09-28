@@ -5,4 +5,4 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- template: templates/stages.yml
+- template: learning/templates/stages.yml
