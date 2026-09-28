@@ -1,25 +1,27 @@
 stages:
 
 - stage: GreetingStage
-  displayName: "Greeting Stage"
 
   jobs:
-  - template: job.yml
-    parameters:
-      runGreeting: true
+  - job: GreetingJob
 
-- stage: InformationStage
-  displayName: "Information Stage"
+    steps:
+    - template: Greeting.yml
+      parameters:
+        name: 'Joshua'
+
+- stage: BuildInfoStage
 
   jobs:
-  - template: job.yml
-    parameters:
-      runBuildInfo: true
+  - job: BuildInfoJob
+
+    steps:
+    - template: build-info.yml
 
 - stage: ExplorerStage
-  displayName: "Explorer Stage"
 
   jobs:
-  - template: job.yml
-    parameters:
-      runExplorer: true
+  - job: ExplorerJob
+
+    steps:
+    - template: file-explorer.yml
