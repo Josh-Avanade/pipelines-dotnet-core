@@ -1,9 +1,8 @@
-trigger: 
-  - main
-pool: 
-  vmImage: 'ubuntu-latest'
-stages: 
-   - template: learning/templates/stage.yml
-     parameters:
-       name: "Josh"
-       message: "buddy!"
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- template: templates/stages.yml

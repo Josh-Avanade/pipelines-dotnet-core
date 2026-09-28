@@ -1,24 +1,64 @@
 parameters:
-  - name: name
-    type: string
-  - name: message
-    type: string
+- name: runGreeting
+  type: boolean
+  default: false
 
+- name: runBuildInfo
+  type: boolean
+  default: false
+
+- name: runExplorer
+  type: boolean
+  default: false
 
 jobs:
-- job: PrintGreeting
-  displayName: 'DoAllJob'
 
-  steps:
+- ${{ if eq(parameters.runGreeting, true) }}:
+  - job: GreetingJob
+    steps:
+    - template: Greeting.yml
+      parameters:
+        name: 'Joshua'
 
-  - template: Greeting.yml
-    parameters:
-      name: '${{ parameters.name }}'
+- ${{ if eq(parameters.runBuildInfo, true) }}:
+  - job: BuildInfoJob
+    steps:
+    - template: build-info.yml
 
-  - template: print.yml
-    parameters:
-      message: 'Hi ${{ parameters.message }}'
+- ${{ if eq(parameters.runExplorer, true) }}:
+  - job: ExplorerJob
+    steps:
+    - template: file-explorer.ymlparameters:
+- name: runGreeting
+  type: boolean
+  default: false
 
-  - template: file-explorer.yml
+- name: runBuildInfo
+  type: boolean
+  default: false
 
-  - template: build-info.yml
+- name: runExplorer
+  type: boolean
+  default: false
+
+jobs:
+
+- ${{ if eq(parameters.runGreeting, true) }}:
+  - job: GreetingJob
+
+    steps:
+    - template: Greeting.yml
+      parameters:
+        name: "Joshua"
+
+- ${{ if eq(parameters.runBuildInfo, true) }}:
+  - job: BuildInfoJob
+
+    steps:
+    - template: build-info.yml
+
+- ${{ if eq(parameters.runExplorer, true) }}:
+  - job: ExplorerJob
+
+    steps:
+    - template: file-explorer.yml
