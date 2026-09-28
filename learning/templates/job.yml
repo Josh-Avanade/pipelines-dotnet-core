@@ -28,7 +28,7 @@ jobs:
 - ${{ if eq(parameters.runExplorer, true) }}:
   - job: ExplorerJob
     steps:
-    - template: file-explorer.ymlparameters:
+    - template: file-explorer.ymlparameters
 - name: runGreeting
   type: boolean
   default: false
