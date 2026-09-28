@@ -4,7 +4,7 @@ stages:
   displayName: "Greeting Stage"
 
   jobs:
-  - template: jobs.yml
+  - template: job.yml
     parameters:
       runGreeting: true
 
@@ -12,7 +12,7 @@ stages:
   displayName: "Information Stage"
 
   jobs:
-  - template: jobs.yml
+  - template: job.yml
     parameters:
       runBuildInfo: true
 
@@ -20,6 +20,6 @@ stages:
   displayName: "Explorer Stage"
 
   jobs:
-  - template: jobs.yml
+  - template: job.yml
     parameters:
       runExplorer: true
