@@ -12,3 +12,5 @@ pool:
 
 stages:
 - template: learning/templates/stage.yml
+parameters:
+  userName: ${{ parameters.userName }}
