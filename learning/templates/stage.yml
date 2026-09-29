@@ -1,3 +1,7 @@
+parameters:
+  - name: userName
+    type: string
+
 stages:
 
 - stage: GreetingStage
