@@ -1,6 +1,6 @@
 parameters:
-  - name: message
+  - name: name
     type: string
 steps: 
-  - script: echo " ${{ parameters.message }}"
+  - script: echo " ${{ parameters.name }}"
     displayName: 'Print message'
