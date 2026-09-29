@@ -9,18 +9,15 @@ parameters:
 
 stages:
 
-- stage : objectTestStage
-
-  condition:  true
+- stage: ObjectTestStage
 
   jobs:
-  - job: objectTestJob
+  - job: ObjectTestJob
 
     steps:
     - template: object-test.yml
       parameters:
         environments: ${{ parameters.environments }}
-
 - stage: GreetingStage
 
 

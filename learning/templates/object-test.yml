@@ -8,8 +8,5 @@ parameters:
 
 steps:
 
-- script: echo "Hello"
-
-${{ each env in parameters.environments }}:
-
-- script: echo "${{ env }}"
+- ${{ each env in parameters.environments }}:
+  - script: echo "${{ env }}"
