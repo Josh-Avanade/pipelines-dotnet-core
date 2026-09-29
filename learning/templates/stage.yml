@@ -1,7 +1,9 @@
 parameters:
-  - name: userName
-    type: string
+- name: userName
+  type: string
 
+- name: environment
+  type: string
 
 stages:
 
