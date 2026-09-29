@@ -12,6 +12,8 @@ stages:
 
 - stage: BuildInfoStage
 
+  dependsOn: GreetingStage
+
   jobs:
   - job: BuildInfoJob
 
@@ -19,6 +21,8 @@ stages:
     - template: build-info.yml
 
 - stage: ExplorerStage
+
+  dependsOn: BuildInfoStage
 
   jobs:
   - job: ExplorerJob
