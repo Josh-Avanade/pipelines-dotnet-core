@@ -1,8 +1,8 @@
 parameters:
-  - name: userName
-    displayName: 'User Name'
-    type: string
-    default: 'Joshua'
+- name: userName
+  displayName: 'User Name'
+  type: string
+  default: 'Joshua'
 
 trigger:
 - main
@@ -12,5 +12,5 @@ pool:
 
 stages:
 - template: learning/templates/stage.yml
-parameters:
-  userName: ${{ parameters.userName }}
+  parameters:
+    userName: ${{ parameters.userName }}
