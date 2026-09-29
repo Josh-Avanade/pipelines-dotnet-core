@@ -4,8 +4,22 @@ parameters:
 
 - name: environment
   type: string
+- name: environments
+  type: object
 
 stages:
+
+- stage : objectTestStage
+
+  condition:  true
+
+  jobs:
+  - job: objectTestJob
+
+    steps:
+    - template: object-test.yml
+      parameters:
+        environments: ${{ parameters.environments }}
 
 - stage: GreetingStage
 

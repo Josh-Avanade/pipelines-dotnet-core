@@ -11,6 +11,12 @@ parameters:
   - dev
   - test
   - prod
+- name: environments
+  type: object
+  default:
+  - dev
+  - test
+  - prod
 
 trigger:
 - main
