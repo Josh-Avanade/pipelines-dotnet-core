@@ -8,9 +8,11 @@ stages:
 
 - stage: GreetingStage
 
+
+  condition: eq${{ parameters.environment }}, 'dev', 'prod')
   jobs:
   - job: GreetingJob
-  condition: eq${{ parameters.environment }}, 'dev', 'prod')
+  
 
     steps:
     - template: Greeting.yml
