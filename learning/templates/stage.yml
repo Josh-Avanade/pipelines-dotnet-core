@@ -38,7 +38,7 @@ stages:
 
   dependsOn: BuildInfoStage
 
-  condition: condition: eq${{ parameters.environment }}, 'prod')
+  condition: eq${{ parameters.environment }}, 'prod')
 
   jobs:
   - job: ExplorerJob
