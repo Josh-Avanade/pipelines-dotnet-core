@@ -10,7 +10,7 @@ stages:
 - stage: GreetingStage
 
 
-  condition:  or(eq(${{ parameters.environment }}, 'dev'), eq(${{ parameters.environment }}, 'prod'))
+ # condition:  or(eq(${{ parameters.environment }}, 'dev'), eq(${{ parameters.environment }}, 'prod'))
   jobs:
   - job: GreetingJob
   
@@ -24,7 +24,7 @@ stages:
 
   dependsOn: GreetingStage
 
-  condition:  or(eq(${{ parameters.environment }}, 'dev'), eq(${{ parameters.environment }}, 'prod'))
+  #condition:  or(eq(${{ parameters.environment }}, 'dev'), eq(${{ parameters.environment }}, 'prod'))
 
   jobs:
   - job: BuildInfoJob
@@ -36,7 +36,7 @@ stages:
 
   dependsOn: BuildInfoStage
 
-  condition: eq(${{ parameters.environment }}, 'prod')
+  condition: eq('${{ parameters.environment }}', 'prod')
 
   jobs:
   - job: ExplorerJob
