@@ -4,13 +4,13 @@ parameters:
   type: string
   default: 'Joshua'
 - name: environment
-displayName: Environment
-type: string
-default: dev
-values:
-- dev
-- test
-- prod
+  displayName: Environment
+  type: string
+  default: dev
+  values:
+  - dev
+  - test
+  - prod
 
 trigger:
 - main
