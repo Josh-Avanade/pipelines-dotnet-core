@@ -1,3 +1,9 @@
+parameters:
+  - name: userName
+    displayName: 'User Name'
+    type: string
+    default: 'Joshua'
+
 trigger:
 - main
 

@@ -8,7 +8,7 @@ stages:
     steps:
     - template: Greeting.yml
       parameters:
-        name: 'Joshua'
+        name: ${{ parameters.userName }}
 
 - stage: BuildInfoStage
 
