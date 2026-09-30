@@ -1,0 +1,20 @@
+parameters:
+- name: environments
+  type: object
+  default: []
+
+stages:
+
+- ${{ each env in parameters.environments }}:
+
+  - stage: ${{ env }}
+
+    jobs:
+
+    - job: PrintEnvironment
+
+      steps:
+
+      - script: |
+          echo "Current environment is:"
+          echo "${{ env }}"

@@ -1,32 +1,16 @@
-parameters:
-- name: userName
-  displayName: 'User Name'
-  type: string
-  default: 'Joshua'
-- name: environment
-  displayName: Environment
-  type: string
-  default: dev
-  values:
-  - dev
-  - test
-  - prod
-- name: environments
-  type: object
-  default:
-  - dev
-  - test
-  - prod
-
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
 
-stages:
-- template: learning/templates/stage.yml
+extends:
+
+  template: learning/templates/structure-template.yml
+
   parameters:
-    userName: ${{ parameters.userName }}
-    environment: ${{ parameters.environment }}
-    environments: ${{ parameters.environments }}
+
+    environments:
+    - dev
+    - test
+    - prod
